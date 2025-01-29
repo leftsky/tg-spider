@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  telespider:
+    build: .
+    volumes:
+      - ./downloads:/app/downloads
+      - ./.env:/app/.env
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped 
